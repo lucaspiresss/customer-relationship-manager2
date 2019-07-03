@@ -11,17 +11,11 @@ import com.lucaspires.api.entity.Customer;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
-	
-	@Autowired
 	private CustomerRepository customerRepository;
 	
+	@Autowired
 	public CustomerServiceImpl(CustomerRepository theCustomerRepository) {
 		customerRepository = theCustomerRepository;
-	}
-
-	@Override
-	public List<Customer> getCustomers() {
-		return customerRepository.findAll();
 	}
 
 	@Override
@@ -32,10 +26,18 @@ public class CustomerServiceImpl implements CustomerService {
 		
 		if (result.isPresent()) {
 			theCustomer = result.get();
-		} else {
-			throw new RuntimeException ("Customer id not found - " + customerId);
 		}
 		
 		return theCustomer;
+	}
+	
+	@Override
+	public List<Customer> getCustomers() {
+		return customerRepository.findAll();
+	}
+
+	@Override
+	public void saveCustomer(Customer theCustomer) {
+		customerRepository.save(theCustomer);
 	}
 }
