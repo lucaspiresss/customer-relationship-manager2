@@ -7,3 +7,4 @@ Implementation-Vendor-Id: com.lucaspires
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
  -starter-parent/client
 Created-By: Maven Integration for Eclipse
+
