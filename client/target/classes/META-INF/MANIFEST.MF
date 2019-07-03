@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Built-By: lucaspires
+Build-Jdk: 11.0.2
+Implementation-Title: client
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.lucaspires
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/client
+Created-By: Maven Integration for Eclipse
