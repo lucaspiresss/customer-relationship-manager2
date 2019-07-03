@@ -33,7 +33,7 @@ The available features can be achieved through the use of the following endpoint
 * [Sublime Text] - awesome text editor for code, markup and prose
 
 ## Todos
-* Write unit tests
+* Write automated tests
 * Secure endpoints
 
 [//]: # (These are reference links used in the body of this note. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
