@@ -1,5 +1,9 @@
 package com.lucaspires.api.service;
 
-public interface CustomerService {
+import java.util.List;
 
+import com.lucaspires.api.entity.Customer;
+
+public interface CustomerService {
+	public List<Customer> getCustomers();
 }
