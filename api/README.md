@@ -27,6 +27,7 @@ The available features can be achieved through the use of the following endpoint
 ## Tools used
 * [Eclipse] - most widely used Java IDE
 * [GitHub] - web-based hosting service for version control using Git
+* [Kanban] - lean method to manage and improve work across human systems
 * [MySQL Workbench] - visual design tool for the MySQL database system
 * [Postman] - API development environment (ADE)
 * [Sublime Text] - awesome text editor for code, markup and prose
@@ -41,6 +42,7 @@ The available features can be achieved through the use of the following endpoint
 [GitHub]: <https://github.com/>
 [Hibernate]: <https://hibernate.org/>
 [Java Development Kit]: <https://www.oracle.com/technetwork/java/javase/downloads/index.html>
+[Kanban]: <https://en.wikipedia.org/wiki/Kanban_(development)>
 [Maven]: <https://maven.apache.org/>
 [MySQL]: <https://www.mysql.com/>
 [MySQL Workbench]: <https://www.mysql.com/products/workbench/>
