@@ -14,6 +14,14 @@ thead {
 }
 
 /* Classes */
+.btn-info {
+	background-color: #558B2F;
+}
+
+.btn-primary {
+	background-color: #0277BD;
+}
+
 .row {
 	display: block;
 	text-align: center;

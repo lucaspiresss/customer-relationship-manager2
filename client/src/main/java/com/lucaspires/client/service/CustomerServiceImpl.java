@@ -31,4 +31,9 @@ public class CustomerServiceImpl implements CustomerService {
 
 		return customers;
 	}
+
+	@Override
+	public void saveCustomer(Customer theCustomer) {
+		restTemplate.postForEntity(apiUrl, theCustomer, String.class);
+	}
 }
