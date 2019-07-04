@@ -24,13 +24,11 @@ public class CustomerController {
 		customerService = theCustomerService;
 	}
 	
-	@GetMapping("/listCustomers")
-	public String listCustomers(Model theModel) {
-		List<Customer> theCustomers = customerService.getCustomers();
+	@GetMapping("/deleteCustomer")
+	public String deleteCustomer(@RequestParam("customerId") int customerId) {
+		customerService.deleteCustomer(customerId);
 		
-		theModel.addAttribute("customers", theCustomers);
-		
-		return "customers/list-customers";
+		return "redirect:/customers/listCustomers";
 	}
 	
 	@GetMapping("/formForAdd")
@@ -49,6 +47,15 @@ public class CustomerController {
 		theModel.addAttribute("customer", theCustomer);
 		
 		return "customers/customer-form";
+	}
+	
+	@GetMapping("/listCustomers")
+	public String listCustomers(Model theModel) {
+		List<Customer> theCustomers = customerService.getCustomers();
+		
+		theModel.addAttribute("customers", theCustomers);
+		
+		return "customers/list-customers";
 	}
 	
 	@PostMapping("/saveCustomer")

@@ -24,6 +24,11 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 	
 	@Override
+	public void deleteCustomer(int customerId) {
+		restTemplate.delete(apiUrl + "/" + customerId);
+	}
+	
+	@Override
 	public Customer getCustomer(int customerId) {
 		Customer theCustomer = restTemplate.getForObject(apiUrl + "/" + customerId, Customer.class);
 		
