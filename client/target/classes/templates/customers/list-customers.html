@@ -23,7 +23,7 @@
 			
 			<hr/>
 			
-			<a th:href="@{/customers/formForAdd}" class="btn btn-primary btn-sm mb-3">
+			<a th:href="@{/customers/formForAddCustomer}" class="btn btn-primary btn-sm mb-3">
 				Add Customer
 			</a>
 			
@@ -44,7 +44,7 @@
 						<td th:text="${tempCustomer.email}" />
 						
 						<td>
-							<a th:href="@{/customers/formForUpdate(customerId=${tempCustomer.id})}" class="btn btn-info btn-sm">
+							<a th:href="@{/customers/formForUpdateCustomer(customerId=${tempCustomer.id})}" class="btn btn-info btn-sm">
 								Update
 							</a>
 							

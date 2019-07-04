@@ -31,8 +31,8 @@ public class CustomerController {
 		return "redirect:/customers/listCustomers";
 	}
 	
-	@GetMapping("/formForAdd")
-	public String formForAdd(Model theModel) {
+	@GetMapping("/formForAddCustomer")
+	public String formForAddCustomer(Model theModel) {
 		Customer theCustomer = new Customer();
 		
 		theModel.addAttribute("customer", theCustomer);
@@ -40,8 +40,8 @@ public class CustomerController {
 		return "customers/customer-form";
 	}
 	
-	@GetMapping("/formForUpdate")
-	public String formForUpdate(@RequestParam("customerId") int customerId, Model theModel) {
+	@GetMapping("/formForUpdateCustomer")
+	public String formForUpdateCustomer(@RequestParam("customerId") int customerId, Model theModel) {
 		Customer theCustomer = customerService.getCustomer(customerId);
 		
 		theModel.addAttribute("customer", theCustomer);
