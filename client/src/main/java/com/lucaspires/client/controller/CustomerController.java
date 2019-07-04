@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.lucaspires.client.model.Customer;
 import com.lucaspires.client.service.CustomerService;
@@ -35,6 +36,15 @@ public class CustomerController {
 	@GetMapping("/formForAdd")
 	public String formForAdd(Model theModel) {
 		Customer theCustomer = new Customer();
+		
+		theModel.addAttribute("customer", theCustomer);
+		
+		return "customers/customer-form";
+	}
+	
+	@GetMapping("/formForUpdate")
+	public String formForUpdate(@RequestParam("customerId") int customerId, Model theModel) {
+		Customer theCustomer = customerService.getCustomer(customerId);
 		
 		theModel.addAttribute("customer", theCustomer);
 		

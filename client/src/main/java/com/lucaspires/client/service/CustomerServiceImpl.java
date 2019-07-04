@@ -24,6 +24,13 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 	
 	@Override
+	public Customer getCustomer(int customerId) {
+		Customer theCustomer = restTemplate.getForObject(apiUrl + "/" + customerId, Customer.class);
+		
+		return theCustomer;
+	}
+	
+	@Override
 	public List<Customer> getCustomers() {
 		ResponseEntity<List<Customer>> responseEntity = restTemplate.exchange(apiUrl, HttpMethod.GET, null, new ParameterizedTypeReference<List<Customer>>() {});
 
@@ -34,6 +41,10 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	public void saveCustomer(Customer theCustomer) {
-		restTemplate.postForEntity(apiUrl, theCustomer, String.class);
+		if (theCustomer.getId() == 0) {
+			restTemplate.postForEntity(apiUrl, theCustomer, String.class);
+		} else {
+			restTemplate.put(apiUrl, theCustomer);
+		}
 	}
 }
