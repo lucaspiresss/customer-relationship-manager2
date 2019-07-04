@@ -2,6 +2,7 @@
 <html lang="en" xlmns:th="http://www.thymeleaf.org">
 
 	<head>
+		<!-- Page title -->
 		<title>Customer Relationship Manager</title>
 		
 		<!-- Required meta tags -->
@@ -17,17 +18,21 @@
 	
 	<body>
 		<div class="container">
+			<!-- Header -->
 			<div class="row">
 				<h3>Customer Relationship Manager</h3>
 			</div>
 			
 			<hr/>
 			
+			<!-- Button: Add Customer -->
 			<a th:href="@{/customers/formForAddCustomer}" class="btn btn-primary btn-sm mb-3">
 				Add Customer
 			</a>
 			
+			<!-- Table containing the customers list -->
 			<table class="table table-border table-striped">
+				<!-- Table header -->
 				<thead>
 					<tr>
 						<th>First Name</th>
@@ -37,17 +42,26 @@
 					</tr>
 				</thead>
 				
+				<!-- Table body -->
 				<tbody>
 					<tr th:each="tempCustomer : ${customers}">
+						<!-- Column: First Name -->
 						<td th:text="${tempCustomer.firstName}" />
+						
+						<!-- Column: Last Name -->
 						<td th:text="${tempCustomer.lastName}" />
+						
+						<!-- Column: Email -->
 						<td th:text="${tempCustomer.email}" />
 						
+						<!-- Column: Actions -->
 						<td>
+							<!-- Button: Update -->
 							<a th:href="@{/customers/formForUpdateCustomer(customerId=${tempCustomer.id})}" class="btn btn-info btn-sm">
 								Update
 							</a>
 							
+							<!-- Button: Delete -->
 							<a th:href="@{/customers/deleteCustomer(customerId=${tempCustomer.id})}" class="btn btn-danger btn-sm" onclick="if (!(confirm('Are you sure you want to delete this customer?'))) return false">
 								Delete
 							</a>

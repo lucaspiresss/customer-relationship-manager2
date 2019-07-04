@@ -32,7 +32,7 @@ public class CustomerServiceImpl implements CustomerService {
 		// Call a method to find the customer by id
 		Optional<Customer> result = customerRepository.findById(customerId);
 		
-		// Creating an empty customer object
+		// Create an empty customer object
 		Customer theCustomer = null;
 		
 		// If a customer was found, put it into the customer object

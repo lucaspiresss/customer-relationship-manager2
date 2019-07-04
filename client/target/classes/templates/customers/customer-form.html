@@ -2,6 +2,7 @@
 <html lang="en" xlmns:th="http://www.thymeleaf.org">
 
 	<head>
+		<!-- Page title -->
 		<title>Save Customer</title>
 		
 		<!-- Required meta tags -->
@@ -17,6 +18,7 @@
 	
 	<body>
 		<div class="container">
+			<!-- Header -->
 			<div class="row">
 				<h3>Customer Relationship Manager</h3>
 			</div>
@@ -25,20 +27,27 @@
 			
 			<p class="h4 mb-4">Save Customer</p>
 			
+			<!-- Customer form -->
 			<form action="#" th:action="@{/customers/saveCustomer}" th:object="${customer}" method="POST">
+				<!-- Id used to update customers -->
 				<input type="hidden" th:field="*{id}" />
 				
+				<!-- Field: First Name -->
 				<input type="text" th:field="*{firstName}" class="form-control mb-4 col-4" placeholder="First Name">
 				
+				<!-- Field: last name -->
 				<input type="text" th:field="*{lastName}" class="form-control mb-4 col-4" placeholder="Last Name">
 				
+				<!-- Field: email -->
 				<input type="text" th:field="*{email}" class="form-control mb-4 col-4" placeholder="Email">
 				
+				<!-- Button: Save -->
 				<button type="submit" class="btn btn-info col-2">Save</button>
 			</form>
 			
 			<hr/>
 			
+			<!-- Link: back to customers list -->
 			<a th:href="@{/customers/listCustomers}">Back to Customers List</a>
 		</div>
 	</body>
