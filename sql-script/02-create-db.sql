@@ -22,7 +22,7 @@ ENGINE = InnoDB;
 -- Inserting sample data into table `customer`
 -- -----------------------------------------------------
 INSERT INTO `customer` VALUES 
-	(1,'Zula','Dallas','zula@emailemail.com'),
+	(1,'Zula','Dallas','zula@email.com'),
 	(2,'Dillon','Oliver','dillon@email.com'),
 	(3,'Kristina','Rao','kristina@email.com'),
 	(4,'Mary','Isabelle','mary@email.com'),
